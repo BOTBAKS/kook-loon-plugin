@@ -22,3 +22,7 @@ URL-REGEX,^https?:\/\/api\.kookapp\.cn\/(?:v\d+\/)?[^?#]*(?:splash|startup|launc
 
 [MitM]
 hostname = www.kookapp.cn, kookapp.cn, api.kookapp.cn
+
+
+
+
