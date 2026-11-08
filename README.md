@@ -10,7 +10,8 @@
 
 ## 功能
 
-- 拦截 KOOK 自有域名中带有 `splash`、`startup`、`launch`、`advert`、`adslot`、`ad_config`、`advertisement` 的启动/开屏广告请求。
+- 精确拦截 `https://www.kookapp.cn/api/v3/ad/config` 开屏广告配置接口。
+- 清理设置接口中的 `ad_banner`、`advertise_on_off` 字段，并对其他启动/广告路径做关键词兜底拦截。
 - 对 KOOK 启动配置响应删除常见广告字段，兼容广告与启动配置合并下发的版本。
 - 规则只作用于 `kookapp.cn`，不会把第三方广告平台域名加入全局拦截，减少误伤其他 App。
 
@@ -28,3 +29,6 @@ KOOK 的接口路径可能随客户端版本调整。本插件根据公开可观
 ## 许可证
 
 MIT License
+
+
+
