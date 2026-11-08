@@ -2,6 +2,12 @@
 
 一个面向 Loon 的 KOOK 开屏广告拦截插件，采用本地规则，不加载远程 JavaScript，也不上传任何数据。
 
+## 一键导入
+
+在 Loon 中添加插件地址：
+
+`https://raw.githubusercontent.com/BOTBAKS/kook-loon-plugin/main/KOOK-Splash-Block.plugin`
+
 ## 功能
 
 - 拦截 KOOK 自有域名中带有 `splash`、`startup`、`launch`、`advert`、`adslot`、`ad_config`、`advertisement` 的启动/开屏广告请求。
@@ -10,7 +16,7 @@
 
 ## 使用
 
-1. 在 Loon 中导入 `KOOK-Splash-Block.plugin` 的 Raw 地址。
+1. 在 Loon 中导入上面的 Raw 地址。
 2. 启用插件，并允许插件添加 MitM 主机名。
 3. 安装并信任 Loon CA 证书，开启 HTTPS 解密。
 4. 完全退出 KOOK 后重新打开。
