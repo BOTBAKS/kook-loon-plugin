@@ -17,11 +17,13 @@ URL-REGEX,^https?:\/\/api\.kookapp\.cn\/(?:v\d+\/)?[^?#]*(?:splash|startup|launc
 
 [Rewrite]
 # 部分版本把广告作为启动配置 JSON 的字段下发；删除常见广告字段后返回原配置。
-^https?:\/\/(?:www\.)?kookapp\.cn\/(?:api|app)\/.* response-body-json-jq 'del(.data.ad,.data.ads,.data.advert,.data.advertisement,.data.advertisements,.data.splash,.data.splash_ad,.data.startup_ad,.data.startup_ads,.data.banner_ad,.data.banner_ads,.data.popup,.data.popups,.data.promotion,.data.promotions)'
-^https?:\/\/api\.kookapp\.cn\/.* response-body-json-jq 'del(.data.ad,.data.ads,.data.advert,.data.advertisement,.data.advertisements,.data.splash,.data.splash_ad,.data.startup_ad,.data.startup_ads,.data.banner_ad,.data.banner_ads,.data.popup,.data.popups,.data.promotion,.data.promotions)'
+^https?:\/\/(?:www\.)?kookapp\.cn\/(?:api|app)\/(?:v\d+\/)?[^?#]*(?:splash|startup|launch|advert|adslot|ad_config|advertisement)[^?#]*(?:[?#].*)?$ response-body-json-jq 'del(.data.ad,.data.ads,.data.advert,.data.advertisement,.data.advertisements,.data.splash,.data.splash_ad,.data.startup_ad,.data.startup_ads,.data.banner_ad,.data.banner_ads,.data.popup,.data.popups,.data.promotion,.data.promotions)'
+^https?:\/\/api\.kookapp\.cn\/(?:v\d+\/)?[^?#]*(?:splash|startup|launch|advert|adslot|ad_config|advertisement)[^?#]*(?:[?#].*)?$ response-body-json-jq 'del(.data.ad,.data.ads,.data.advert,.data.advertisement,.data.advertisements,.data.splash,.data.splash_ad,.data.startup_ad,.data.startup_ads,.data.banner_ad,.data.banner_ads,.data.popup,.data.popups,.data.promotion,.data.promotions)'
 
 [MitM]
 hostname = www.kookapp.cn, kookapp.cn, api.kookapp.cn
+
+
 
 
 
